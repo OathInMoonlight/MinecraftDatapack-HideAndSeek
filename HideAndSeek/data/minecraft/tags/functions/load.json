@@ -1,0 +1,7 @@
+{
+    "values": [
+        "hide_and_seek:game_control/initial_value",
+        "hide_and_seek:global_scores/scores_reset",
+        "hide_and_seek:load_message"
+    ]
+}
