@@ -14,7 +14,6 @@ clear @a
 difficulty peaceful
 kill @e[type=minecraft:block_display]
 kill @e[type=minecraft:interaction]
-# $clone $(game_area1_x) $(game_area1_y) $(game_area1_z) $(game_area2_x) $(game_area2_y) $(game_area2_z) $(game_area_place_x) $(game_area_place_y) $(game_area_place_z) replace force
 
 team remove seeker
 team remove hider
@@ -33,7 +32,6 @@ title @a[team=seeker] subtitle {"text":"揪出每一位躲藏者获得胜利","c
 xp set @a 0 points
 xp set @a 0 levels
 effect give @a instant_health 1 5
-effect give @a[team=hider] minecraft:invisibility infinite
 $spawnpoint @a[team=hider] $(game_spawn_point_x) $(game_spawn_point_y) $(game_spawn_point_z)
 $spawnpoint @a[team=seeker] $(seeker_wating_point_x) $(seeker_wating_point_y) $(seeker_wating_point_z)
 $tp @a[team=hider] $(game_spawn_point_x) $(game_spawn_point_y) $(game_spawn_point_z)
@@ -61,6 +59,14 @@ execute as @a run scoreboard players set @s death_counter 0
 scoreboard objectives remove respawn_counter
 scoreboard objectives add respawn_counter dummy
 execute as @a run scoreboard players operation @s respawn_counter = #respawn_time game_control
+scoreboard objectives remove rand_x
+scoreboard objectives remove rand_z
+scoreboard objectives add rand_x dummy
+scoreboard objectives add rand_z dummy
+function hide_and_seek:skill/rand_pos
+scoreboard objectives remove skill_invisibility
+scoreboard objectives add skill_invisibility dummy
+execute as @a[team=hider] run scoreboard players set @s skill_invisibility 0
 function hide_and_seek:global_scores/round_start
 
 scoreboard players operation #seeker_wating_time_counter game_control = #seeker_wating_time game_control
