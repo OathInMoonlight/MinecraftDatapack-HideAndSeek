@@ -13,7 +13,8 @@ execute as @a[team=hider] if score @s skill_invisibility matches 1.. run scorebo
 execute as @a[team=seeker] unless data entity @s Inventory[{Slot:0b}].id run clear @s minecraft:diamond_sword
 execute as @a[team=seeker] unless data entity @s Inventory[{Slot:0b}].id run item replace entity @a[team=seeker] hotbar.0 with minecraft:diamond_sword{Enchantments:[{id:"sharpness",lvl:5}],Unbreakable:true,HideFlags:2}
 execute as @a[team=seeker,scores={snowball_used=1}] at @s run function hide_and_seek:skill/seeker_snowball_used
-execute if score #seek_time_counter_seconds game_control matches 0 run function hide_and_seek:skill/rand_pos
+execute store result storage hide_and_seek:game_control tmp.compass_range int 1 run scoreboard players get #current_compass_range game_control
+execute if score #seek_time_counter_seconds game_control matches 0 run function hide_and_seek:skill/rand_pos with storage hide_and_seek:game_control tmp
 execute as @a[team=seeker] unless data entity @s Inventory[{Slot:1b}].id run clear @s minecraft:compass
 execute as @a[team=seeker] at @s unless data entity @s Inventory[{Slot:1b}].id run function hide_and_seek:skill/seeker_compass
 execute if score #game_start game_control matches 1 run scoreboard players operation #compass_reload game_control = #seeker_wating_time_counter game_control
