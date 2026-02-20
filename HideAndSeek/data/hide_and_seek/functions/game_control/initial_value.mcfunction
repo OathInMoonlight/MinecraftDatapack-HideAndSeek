@@ -12,7 +12,7 @@ scoreboard players set #hider_reward_point game_control 5
 scoreboard players set #respawn_time game_control 600
 scoreboard players set #seeker_skill_interval_time game_control 2400
 scoreboard players set #seeker_compass_range game_control 10
-scoreboard players set #seeker_compass_range_increment game_control 4
+scoreboard players set #seeker_compass_range_increment game_control 5
 data modify storage hide_and_seek:game_control initial_value merge value {seeker_wating_time:900,seek_time:12000,hider_cooling_time:200,respawn_time:600,seeker_skill_interval_time:2400}
 data modify storage hide_and_seek:game_control initial_value merge value {seeker_num:1,hider_reward_point:5,seeker_compass_range:10,seeker_compass_range_increment:4}
 

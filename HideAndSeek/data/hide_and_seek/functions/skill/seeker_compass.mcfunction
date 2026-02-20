@@ -1,4 +1,4 @@
-execute as @p[team=hider] run tag @s add compassed
+execute as @p[team=hider,scores={skill_invisibility=0}] run tag @s add compassed
 execute as @a[team=hider,tag=compassed] store result score #tmp_rand_x rand_x run data get entity @s Pos[0]
 execute as @a[team=hider,tag=compassed] store result score #tmp_rand_z rand_z run data get entity @s Pos[2]
 execute as @a[team=hider,tag=compassed] run scoreboard players operation #tmp_rand_x rand_x += @s rand_x
