@@ -70,6 +70,7 @@ scoreboard objectives remove skill_invisibility
 scoreboard objectives add skill_invisibility dummy
 execute as @a[team=hider] run scoreboard players set @s skill_invisibility 0
 function hide_and_seek:global_scores/round_start
+scoreboard players set #no_hider_found game_control 0
 
 scoreboard players operation #seeker_wating_time_counter game_control = #seeker_wating_time game_control
 scoreboard players operation #seek_time_counter game_control = #seek_time game_control

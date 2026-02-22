@@ -1,5 +1,6 @@
 execute as @a[team=hider,scores={death_counter=1},limit=1] run tag @s add dead_hider
 clear @a[team=hider,tag=dead_hider]
+scoreboard players set #no_hider_found game_control 0
 
 scoreboard players set #block_counter game_control 1
 function hide_and_seek:game_control/hider_death_each
