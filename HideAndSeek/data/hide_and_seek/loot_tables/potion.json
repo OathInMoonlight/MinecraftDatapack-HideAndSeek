@@ -10,18 +10,18 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {"text":"迅捷药水","italic":false}
+                            "name": {"text":"隐身药水","italic":false}
                         },
                         {
                             "function": "set_lore",
                             "lore": [
-                                {"text":"使用后立即获得迅捷效果","italic":false},
+                                {"text":"使用后立即获得隐身效果","italic":false},
                                 {"text":"持续时间15秒","italic":false}
                             ]
                         },
                         {
                             "function": "set_nbt",
-                            "tag": "{HideFlags:32}"
+                            "tag": "{Potion:'minecraft:invisibility',HideFlags:32}"
                         }
                     ],
                     "weight": 1

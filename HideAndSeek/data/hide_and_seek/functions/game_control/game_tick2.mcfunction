@@ -15,7 +15,7 @@ execute store result bossbar hide_and_seek:seek_time_bar value run scoreboard pl
 
 scoreboard players operation #minutes_times_seconds game_control = #seek_time_counter game_control
 scoreboard players operation #minutes_times_seconds game_control %= #seeker_skill_interval_time game_control
-execute if score #minutes_times_seconds game_control matches 0 run tag @r[team=seeker] add lucky
+execute if score #minutes_times_seconds game_control matches 0 run execute unless score #hider_num_counter game_control matches 1 run tag @r[team=seeker] add lucky
 give @a[team=seeker,tag=lucky] minecraft:snowball{display:{Name:'[{"text":"圣光","color":"white","italic":false}]',Lore:['[{"text":"使圣光降临在最近的躲藏者身上","italic":false}]','[{"text":"持续5秒钟","italic":false}]']}}
 title @a[team=seeker,tag=lucky] title {"text":"你获得了一个圣光"}
 title @a[team=seeker,tag=lucky] subtitle {"text":"幸运女神眷顾于你","color":"gray"}
