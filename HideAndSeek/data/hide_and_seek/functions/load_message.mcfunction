@@ -7,5 +7,5 @@ tellraw @a {"text":"(必要)","color":"red","extra":[{"text":"使用函数 ","co
 tellraw @a {"text":"(可选)使用函数 ","extra":[{"text":"hide_and_seek:set_value/<函数名> {ticks:<刻数>}","color":"green"},{"text":" 设置初始时间","color":"white"}]}
 tellraw @a {"text":"(可选)使用函数 ","extra":[{"text":"hide_and_seek:set_value/<函数名> {num:<值>}","color":"green"},{"text":" 设置初始值","color":"white"}]}
 tellraw @a {"text":"技术协助：","extra":[{"text":"北海冥香","color":"blue"}]}
-tellraw @a {"text":"版本：","extra":[{"text":"v1.2","color":"yellow"}]}
+tellraw @a {"text":"版本：","extra":[{"text":"v1.3","color":"yellow"}]}
 tellraw @a {"text":"-----------------------------------------------------------------------------------------------------","color":"green"}
