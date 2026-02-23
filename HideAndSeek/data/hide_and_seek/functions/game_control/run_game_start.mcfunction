@@ -1,0 +1,1 @@
+function hide_and_seek:game_control/game_start with storage hide_and_seek:game_control initial_value

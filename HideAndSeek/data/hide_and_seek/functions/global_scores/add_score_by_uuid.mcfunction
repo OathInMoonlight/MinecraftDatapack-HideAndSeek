@@ -1,0 +1,1 @@
+$scoreboard players add @a[team=seeker,nbt={UUID:$(player)}] seeker_scores 1

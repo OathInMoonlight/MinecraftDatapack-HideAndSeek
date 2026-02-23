@@ -1,0 +1,4 @@
+data modify storage hide_and_seek:game_control initial_value.seeker_wating_point_x set from entity @s Pos[0]
+data modify storage hide_and_seek:game_control initial_value.seeker_wating_point_y set from entity @s Pos[1]
+data modify storage hide_and_seek:game_control initial_value.seeker_wating_point_z set from entity @s Pos[2]
+tellraw @a {"text":"搜查者出生点已被设置为：","extra":[{"nbt":"initial_value.seeker_wating_point_x","storage":"hide_and_seek:game_control","color":"yellow"},{"text":" "},{"nbt":"initial_value.seeker_wating_point_y","storage":"hide_and_seek:game_control","color":"yellow"},{"text":" "},{"nbt":"initial_value.seeker_wating_point_z","storage":"hide_and_seek:game_control","color":"yellow"}]}

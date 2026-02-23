@@ -1,0 +1,4 @@
+data modify storage hide_and_seek:game_control initial_value.game_area2_x set from entity @s Pos[0]
+data modify storage hide_and_seek:game_control initial_value.game_area2_y set from entity @s Pos[1]
+data modify storage hide_and_seek:game_control initial_value.game_area2_z set from entity @s Pos[2]
+tellraw @a {"text":"游戏区域副本角点2已被设置为：","extra":[{"nbt":"initial_value.game_area2_x","storage":"hide_and_seek:game_control","color":"yellow"},{"text":" "},{"nbt":"initial_value.game_area2_y","storage":"hide_and_seek:game_control","color":"yellow"},{"text":" "},{"nbt":"initial_value.game_area2_z","storage":"hide_and_seek:game_control","color":"yellow"}]}
