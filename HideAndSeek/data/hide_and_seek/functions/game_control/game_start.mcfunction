@@ -63,7 +63,9 @@ scoreboard objectives remove rand_x
 scoreboard objectives remove rand_z
 scoreboard objectives add rand_x dummy
 scoreboard objectives add rand_z dummy
-function hide_and_seek:skill/rand_pos
+scoreboard players operation #current_compass_range game_control = #seeker_compass_range game_control
+execute store result storage hide_and_seek:game_control tmp.compass_range int 1 run scoreboard players get #current_compass_range game_control
+function hide_and_seek:skill/rand_pos with storage hide_and_seek:game_control tmp
 scoreboard objectives remove skill_invisibility
 scoreboard objectives add skill_invisibility dummy
 execute as @a[team=hider] run scoreboard players set @s skill_invisibility 0
