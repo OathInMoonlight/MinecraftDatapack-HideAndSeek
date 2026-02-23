@@ -1,6 +1,6 @@
 kill @e[type=minecraft:snowball]
 execute as @s at @s run playsound minecraft:entity.experience_orb.pickup master @s
-tag @p[team=hider,sort=furthest] add expose
+tag @p[team=hider] add expose
 execute as @a[team=hider,tag=expose] at @s run tp @s ~ ~0.1 ~
 effect give @p[team=hider,tag=expose] glowing 5
 execute as @a[team=hider,tag=expose] at @s run summon firework_rocket ~ ~10 ~ {LifeTime:20,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:1,Flicker:true,Trail:true,Colors:[I;4312372]}],Flight:1}}}}

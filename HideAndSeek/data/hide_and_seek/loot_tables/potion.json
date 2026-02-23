@@ -17,7 +17,7 @@
                             "lore": [
                                 {"text":"使用后立即获得隐身效果","italic":false},
                                 {"text":"隐身无法隐藏奔跑状态的脚步粒子","italic":false},
-                                {"text":"持续时间20秒","italic":false}
+                                {"text":"持续时间25秒","italic":false}
                             ]
                         },
                         {
