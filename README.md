@@ -2,14 +2,16 @@
 这是一个用于原版服务器的 **方块躲猫猫** 小游戏数据包，基于 **1.20.4** 版本开发
 
 ## 使用方法
-1. [点击此处下载数据包](https://github.com/OathInMoonlight/MinecraftDatapack-HideAndSeek/releases)  
-2. 将下载好的数据包放置在你游戏存档的`存档名/datapacks/`目录下  
-3. 打开游戏进入存档，使用`/reload`命令加载数据包  
-4. 按照提示设置初始参数  
-5. 使用命令`/function hide_and_seek:game_control/run_game_start`开始游戏
-或者使用nbt标签
-`{BlockEntityTag:{front_text:{messages:['{"text":""}','{"text":"开始游戏","clickEvent":{"action":"run_command","value":"/function hide_and_seek:game_control/run_game_start"}}','{"text":""}','{"text":""}']}}}`
-获取开始游戏告示牌
+1. [点击此处下载数据包](https://github.com/OathInMoonlight/MinecraftDatapack-HideAndSeek/releases)
+2. 按照你的地图修改`HideAndSeek\data\hide_and_seek\loot_tables\block_generator.json`文件内的可变身方块
+3. 将下载好的数据包放置在你游戏存档的`存档名/datapacks/`目录下  
+4. 打开游戏进入存档，使用`/reload`命令加载数据包  
+5. 按照提示设置初始参数  
+6. 使用命令`/function hide_and_seek:game_control/run_game_start`开始游戏
+
+    或者使用nbt标签
+    `{BlockEntityTag:{front_text:{messages:['{"text":""}','{"text":"开始游戏","clickEvent":{"action":"run_command","value":"/function hide_and_seek:game_control/run_game_start"}}','{"text":""}','{"text":""}']}}}`
+    获取开始游戏告示牌
 
 ## 基本规则
 游戏开始将会随机分配玩家为 **躲藏者** 和 **搜查者**
@@ -24,7 +26,7 @@
 ### 搜查者
 - **搜查者** 在游戏开始需等待一定时间后进入游戏区域
 - **搜查者** 会被分配一个 **罗盘** 指向最近的 **躲藏者** 的模糊位置
-- 随着 **躲藏者** 被击杀，**罗盘** 的指向会愈发不精确
+- 随着 **躲藏者** 被击杀，**罗盘** 的指向会愈发模糊
 - 若 **搜查者** 一定时间未击杀 **躲藏者**，一位随机的 **搜查者** 将获得一个 **圣光** 技能
 - **搜查者** 释放 **圣光** 可以使其最近的 **躲藏者** 显形
 - **搜查者** 若死亡需等待一定时间后复活
@@ -36,17 +38,17 @@
 
 ## 可自定义项
 ### 地点类
-使用函数`hide_and_seek:set_value/set_lobby`设置地图大厅位置  
-使用函数`hide_and_seek:set_value/set_game_spawn_point`设置游戏内出生点  
+使用函数`hide_and_seek:set_value/set_lobby`设置地图大厅位置
+使用函数`hide_and_seek:set_value/set_game_spawn_point`设置游戏内出生点
 使用函数`hide_and_seek:set_value/set_seeker_wating_point`设置搜查者等待位置
 ### 时间类
-使用函数`hide_and_seek:set_value/set_seek_time`设置搜查者搜查时间  
-使用函数`hide_and_seek:set_value/set_seeker_wating_time`设置搜查者初始等待时间  
-使用函数`hide_and_seek:set_value/set_respawn_time`设置重生等待时间  
-使用函数`hide_and_seek:set_value/set_hider_cooling_time`设置躲藏者嘲讽技能冷却时间  
+使用函数`hide_and_seek:set_value/set_seek_time`设置搜查者搜查时间
+使用函数`hide_and_seek:set_value/set_seeker_wating_time`设置搜查者初始等待时间
+使用函数`hide_and_seek:set_value/set_respawn_time`设置重生等待时间
+使用函数`hide_and_seek:set_value/set_hider_cooling_time`设置躲藏者嘲讽技能冷却时间
 使用函数`hide_and_seek:set_value/set_seeker_skill_interval_time`设置搜查者圣光发放间隔
 ### 其余规则
-使用函数`hide_and_seek:set_value/set_seeker_num`设置初始搜查者数量  
-使用函数`hide_and_seek:set_value/set_hider_reward_point`设置多少嘲讽点数兑换一次药水  
-使用函数`hide_and_seek:set_value/set_seeker_compass_range`设置搜查者罗盘初始范围  
+使用函数`hide_and_seek:set_value/set_seeker_num`设置初始搜查者数量
+使用函数`hide_and_seek:set_value/set_hider_reward_point`设置多少嘲讽点数兑换一次药水
+使用函数`hide_and_seek:set_value/set_seeker_compass_range`设置搜查者罗盘初始范围
 使用函数`hide_and_seek:set_value/set_seeker_compas_range_increment`设置搜查者罗盘范围随躲藏者数量减少的增量
