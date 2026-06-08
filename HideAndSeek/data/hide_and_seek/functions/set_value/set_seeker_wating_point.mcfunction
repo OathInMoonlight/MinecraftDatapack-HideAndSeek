@@ -1,4 +1,4 @@
 execute store result storage hide_and_seek:game_control initial_value.seeker_wating_point_x int 1 run data get entity @s Pos[0]
 execute store result storage hide_and_seek:game_control initial_value.seeker_wating_point_y int 1 run data get entity @s Pos[1]
 execute store result storage hide_and_seek:game_control initial_value.seeker_wating_point_z int 1 run data get entity @s Pos[2]
-tellraw @a {"text":"搜查者出生点已被设置为：","extra":[{"nbt":"initial_value.seeker_wating_point_x","storage":"hide_and_seek:game_control","color":"yellow"},{"text":" "},{"nbt":"initial_value.seeker_wating_point_y","storage":"hide_and_seek:game_control","color":"yellow"},{"text":" "},{"nbt":"initial_value.seeker_wating_point_z","storage":"hide_and_seek:game_control","color":"yellow"}]}
+tellraw @a {"text":"${set_seeker_wating_point}: ","extra":[{"nbt":"initial_value.seeker_wating_point_x","storage":"hide_and_seek:game_control","color":"yellow"},{"text":" "},{"nbt":"initial_value.seeker_wating_point_y","storage":"hide_and_seek:game_control","color":"yellow"},{"text":" "},{"nbt":"initial_value.seeker_wating_point_z","storage":"hide_and_seek:game_control","color":"yellow"}]}

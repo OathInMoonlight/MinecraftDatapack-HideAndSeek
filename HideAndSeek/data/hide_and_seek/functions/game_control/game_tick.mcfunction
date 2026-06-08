@@ -6,8 +6,8 @@ execute as @a[team=hider,scores={splash_potion_used=1}] run function hide_and_se
 execute as @a[team=hider,scores={lingering_potion_used=1}] run function hide_and_seek:skill/hider_lingering_potion_used
 execute as @a[team=hider] if score @s hider_cooling < #hider_cooling_time game_control run scoreboard players add @s hider_cooling 1
 execute as @a[team=hider] unless data entity @s Inventory[{Slot:1b}].id run clear @s minecraft:snowball
-execute as @a[team=hider] if score @s hider_cooling = #hider_cooling_time game_control run execute unless data entity @s Inventory[{Slot:1b}].id run item replace entity @s hotbar.1 with minecraft:snowball{display:{Name:'[{"text":"嘲讽","color":"red","italic":false}]',Lore:['[{"text":"嘲讽获得1点挑衅点数","italic":false}]','[{"text":"集齐5点换取随机物品","italic":false}]']}}
-execute as @a[team=hider] run title @s actionbar {"text":"挑衅点数：","extra":[{"score":{"name":"@s","objective":"hider_points"},"color":"yellow"}]}
+execute as @a[team=hider] if score @s hider_cooling = #hider_cooling_time game_control run execute unless data entity @s Inventory[{Slot:1b}].id run item replace entity @s hotbar.1 with minecraft:snowball{display:{Name:'[{"text":"${taunt}","color":"red","italic":false}]',Lore:['[{"text":"${taunt_to_get_points}","italic":false}]','[{"text":"${collect_points_to_get_random_item}","italic":false}]']}}
+execute as @a[team=hider] run title @s actionbar {"text":"${taunt_point}: ","extra":[{"score":{"name":"@s","objective":"hider_points"},"color":"yellow"}]}
 execute as @a[team=hider] if score @s skill_invisibility matches 1.. run scoreboard players remove @s skill_invisibility 1
 
 execute as @a[team=seeker] unless data entity @s Inventory[{Slot:0b}].id run clear @s minecraft:diamond_sword

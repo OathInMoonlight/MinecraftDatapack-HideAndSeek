@@ -25,10 +25,10 @@ scoreboard players set #seeker_num_count game_control 1
 function hide_and_seek:game_control/team_allocate
 team join hider @a[team=!seeker]
 team modify hider seeFriendlyInvisibles false
-title @a[team=hider] title {"text":"你是","color":"white","extra":[{"text":"躲藏者","color":"green","bold":true}]}
-title @a[team=hider] subtitle {"text":"拼尽全力藏到最后吧","color":"gray"}
-title @a[team=seeker] title {"text":"你是","color":"white","extra":[{"text":"搜查者","color":"blue","bold":true}]}
-title @a[team=seeker] subtitle {"text":"揪出每一位躲藏者获得胜利","color":"gray"}
+title @a[team=hider] title {"text":"${you_are}","color":"white","extra":[{"text":"${hider}","color":"green","bold":true}]}
+title @a[team=hider] subtitle {"text":"${hide_till_end}","color":"gray"}
+title @a[team=seeker] title {"text":"${you_are}","color":"white","extra":[{"text":"${seeker}","color":"blue","bold":true}]}
+title @a[team=seeker] subtitle {"text":"${seek_and_win}","color":"gray"}
 xp set @a 0 points
 xp set @a 0 levels
 effect give @a instant_health 1 5
@@ -76,8 +76,8 @@ scoreboard players operation #seeker_wating_time_counter game_control = #seeker_
 scoreboard players operation #seek_time_counter game_control = #seek_time game_control
 bossbar remove hide_and_seek:seeker_wating_time_bar
 bossbar remove hide_and_seek:seek_time_bar
-bossbar add hide_and_seek:seeker_wating_time_bar "搜查者即将到达战场"
-bossbar add hide_and_seek:seek_time_bar "搜查时间剩余"
+bossbar add hide_and_seek:seeker_wating_time_bar "${seeker_come_soon}"
+bossbar add hide_and_seek:seek_time_bar "${seek_time_left}"
 bossbar set hide_and_seek:seeker_wating_time_bar color red
 $bossbar set hide_and_seek:seeker_wating_time_bar max $(seeker_wating_time)
 bossbar set hide_and_seek:seeker_wating_time_bar visible true

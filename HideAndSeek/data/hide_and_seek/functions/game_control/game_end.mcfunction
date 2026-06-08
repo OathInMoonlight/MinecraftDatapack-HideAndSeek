@@ -13,14 +13,14 @@ tag @a remove moving_hider
 effect give @a instant_health 1 3
 $spawnpoint @a $(lobby_x) $(lobby_y) $(lobby_z)
 $tp @a $(lobby_x) $(lobby_y) $(lobby_z)
-title @a title {"text":"游戏结束","color":"yellow","bold":true}
-tellraw @a {"text":"游戏结束！","color":"yellow","bold":true}
-execute as @a if score #hider_num_counter game_control matches 0 run title @a subtitle {"text":"搜查者","color":"blue","bold":true,"extra":[{"text":"找出了所有老鼠","color":"white","bold":false}]}
-execute as @a if score #hider_num_counter game_control matches 0 run tellraw @s {"text":"搜查者","color":"blue","bold":true,"extra":[{"text":"找出了所有老鼠","color":"white","bold":false}]}
+title @a title {"text":"${game_end}","color":"yellow","bold":true}
+tellraw @a {"text":"${game_end}","color":"yellow","bold":true}
+execute as @a if score #hider_num_counter game_control matches 0 run title @a subtitle {"text":"${seeker}","color":"blue","bold":true,"extra":[{"text":"${found_mouse}","color":"white","bold":false}]}
+execute as @a if score #hider_num_counter game_control matches 0 run tellraw @s {"text":"${seeker}","color":"blue","bold":true,"extra":[{"text":"${found_mouse}","color":"white","bold":false}]}
 execute as @a[team=hider] at @s if score #hider_num_counter game_control matches 0 run playsound minecraft:item.goat_horn.sound.7 master @s
 execute as @a[team=seeker] at @s if score #hider_num_counter game_control matches 0 run playsound minecraft:item.goat_horn.sound.1 master @s
-execute as @a unless score #hider_num_counter game_control matches 0 run title @a subtitle {"text":"躲藏者","color":"green","bold":true,"extra":[{"text":"苟到了最后","color":"white","bold":false}]}
-execute as @a unless score #hider_num_counter game_control matches 0 run tellraw @s {"text":"躲藏者","color":"green","bold":true,"extra":[{"text":"苟到了最后","color":"white","bold":false}]}
+execute as @a unless score #hider_num_counter game_control matches 0 run title @a subtitle {"text":"${hider}","color":"green","bold":true,"extra":[{"text":"${last_survivor}","color":"white","bold":false}]}
+execute as @a unless score #hider_num_counter game_control matches 0 run tellraw @s {"text":"${hider}","color":"green","bold":true,"extra":[{"text":"${last_survivor}","color":"white","bold":false}]}
 execute as @a[team=hider] at @s unless score #hider_num_counter game_control matches 0 run playsound minecraft:item.goat_horn.sound.1 master @s
 execute as @a[team=seeker] at @s unless score #hider_num_counter game_control matches 0 run playsound minecraft:item.goat_horn.sound.7 master @s
 

@@ -1,4 +1,4 @@
 execute store result storage hide_and_seek:game_control initial_value.lobby_x int 1 run data get entity @s Pos[0]
 execute store result storage hide_and_seek:game_control initial_value.lobby_y int 1 run data get entity @s Pos[1]
 execute store result storage hide_and_seek:game_control initial_value.lobby_z int 1 run data get entity @s Pos[2]
-tellraw @a {"text":"游戏大厅已被设置为：","extra":[{"nbt":"initial_value.lobby_x","storage":"hide_and_seek:game_control","color":"yellow"},{"text":" "},{"nbt":"initial_value.lobby_y","storage":"hide_and_seek:game_control","color":"yellow"},{"text":" "},{"nbt":"initial_value.lobby_z","storage":"hide_and_seek:game_control","color":"yellow"}]}
+tellraw @a {"text":"${set_lobby}: ","extra":[{"nbt":"initial_value.lobby_x","storage":"hide_and_seek:game_control","color":"yellow"},{"text":" "},{"nbt":"initial_value.lobby_y","storage":"hide_and_seek:game_control","color":"yellow"},{"text":" "},{"nbt":"initial_value.lobby_z","storage":"hide_and_seek:game_control","color":"yellow"}]}
