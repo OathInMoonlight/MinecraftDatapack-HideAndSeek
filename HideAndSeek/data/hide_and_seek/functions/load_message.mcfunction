@@ -1,4 +1,4 @@
-tellraw @a {"text":"------------------------- ","color":"green","extra":[{"text":"${hide_and_seek}","color":"red"},{"text":" created by ","color":"white"},{"text":"OathInMoonlight","color":"blue"},{"text":" -------------------------","color":"green"}]}
+tellraw @a {"text":"${divide_line} ","color":"green","extra":[{"text":"${hide_and_seek}","color":"red"},{"text":" created by ","color":"white"},{"text":"OathInMoonlight","color":"blue"},{"text":" ${divide_line}","color":"green"}]}
 tellraw @a {"text":"(${necessary}) ","color":"red","extra":[{"text":"${using}","color":"white"},{"text":"setworldspawn <${coordinate}>","color":"green"},{"text":" ${set_worldspawn}","color":"white"}]}
 tellraw @a {"text":"(${necessary}) ","color":"red","extra":[{"text":"${using}","color":"white"},{"text":"worldborder center <${coordinate}>","color":"green"},{"text":" ${set_game_area_center}","color":"white"}]}
 tellraw @a {"text":"(${necessary}) ","color":"red","extra":[{"text":"${using}","color":"white"},{"text":"worldborder set <${value}>","color":"green"},{"text":" ${set_game_area_size}","color":"white"}]}

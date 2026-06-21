@@ -1,5 +1,6 @@
 {
     "hide_and_seek": { "zh": "方块躲猫猫", "en": "Block Hide and Seek", "ja": "ブロックかくれんぼ" },
+    "divide_line": { "zh": "-------------------------", "en": "--------------------", "ja": "---------------------" },
     "necessary": { "zh": "必要", "en": "Necessary", "ja": "必要" },
     "optional": { "zh": "可选", "en": "Optional", "ja": "オプション" },
     "using": { "zh": "使用 ", "en": "Using ", "ja": "" },
@@ -17,7 +18,7 @@
     "tecnical_assistance": { "zh": "技术协助", "en": "Technical Assistance", "ja": "技術協力" },
     "version": { "zh": "版本", "en": "Version", "ja": "バージョン" },
 
-    "you_are": { "zh": "你是", "en": "You are", "ja": "あなたは" },
+    "you_are": { "zh": "你是", "en": "You are ", "ja": "あなたは" },
     "hider": { "zh": "躲藏者", "en": "Hider", "ja": "ハイダー" },
     "seeker": { "zh": "搜查者", "en": "Seeker", "ja": "シーカー" },
     "hide_till_end": { "zh": "拼尽全力藏到最后吧", "en": "Hide till the end", "ja": "最後まで隠れよう" },
@@ -59,8 +60,8 @@
     "get_instant_health_by_potion": { "zh": "使用后立即获得瞬间治疗效果", "en": "Using it will grant you instant health immediately", "ja": "使用するとすぐに即時回復の効果が得られる" },
 
     "game_end": { "zh": "游戏结束", "en": "Game End", "ja": "ゲーム終了" },
-    "found_mouse": { "zh": "找出了所有老鼠", "en": "Found all the mice", "ja": "すべてのネズミを見つけた" },
-    "last_survivor": { "zh": "苟到了最后", "en": "Survived until the end", "ja": "最後まで生き残った" },
+    "found_mouse": { "zh": "找出了所有老鼠", "en": " found all the mice", "ja": "すべてのネズミを見つけた" },
+    "last_survivor": { "zh": "苟到了最后", "en": " survived until the end", "ja": "最後まで生き残った" },
 
     "skilled_in_attack": { "zh": "善攻者", "en": "Those skilled in attack", "ja": "攻撃に長ける者"},
     "skilled_in_defense": { "zh": "善守者", "en": "Those skilled in defense", "ja": "防御に長ける者"},
